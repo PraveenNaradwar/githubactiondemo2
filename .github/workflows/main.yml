@@ -22,4 +22,6 @@ jobs:
               run: pip install -r requirements.txt
               
             - name: get data from api
+              env:
+                API_TOKEN: ${{secrets.API_TOKEN}}
               run: python read_data_api.py  
